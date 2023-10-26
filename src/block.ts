@@ -248,6 +248,8 @@ export class TimelineProcessor {
 				} else {
 					end = new Date(endDate);
 				}
+				// Add a day
+				end.setUTCDate(end.getUTCDate() + 1);
 
 				if (start.toString() === 'Invalid Date') {
 					return;
